@@ -1,0 +1,103 @@
+<!--Add table headers, section count subtractors, symbols?-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="objects.js"></script>
+    <script src="data.js"></script>
+    <script src="actions.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"/>
+
+</head>
+<div id="title">Objects in School</div>
+<body onload="buildStudentList(), buildSectionList(), buildFirstSectionList()">
+<br>
+
+<label for="firstname">First name:</label>
+<input type="text" id="firstname" value="" size="25">
+
+
+<label for="lastname">Last name:</label>
+<input type="text" id="lastname" value="" size="25">
+<br>
+<br>
+<label for="grade">Grade:</label>
+<select id="grade" button class="btn btn-default dropdown-toggle">
+    <span class="caret"></span>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">Not entering a student, n/a</option>
+</select>
+
+<label for="section">Section:</label>
+<select id="section" button class="btn btn-default dropdown-toggle">
+    <option value="13">Not entering a teacher, n/a</option>
+</select>
+<br>
+<br>
+
+<button class="btn btn-success" id="myButton" onclick="addStudent()">
+    <span class="glyphicon glyphicon-user"></span>Add Student</button>
+<button class="btn btn-success" id="myButton2" onclick="addTeacher()">
+    <span class="glyphicon glyphicon-apple"></span>Add Teacher</button>
+<br>
+<div id="outputthree"></div>
+<br>
+<label for="sectionname">Section name:</label>
+<input type="text" id="sectionname" value="" size="25">
+<br>
+<label for="sectionsize">Section size:</label>
+<input type="text" id="sectionsize" value="" size="25">
+<br>
+<br>
+
+<button class="btn btn-success" id="myButton3" onclick="addSection()">
+    <span class="glyphicon glyphicon-pencil"></span>Add Section</button>
+
+
+<br>
+<br>
+
+<button class="btn btn-info" id="myButton4" onclick="listStudents()">
+    <span class="glyphicon glyphicon-user"></span>List Students</button>
+<button class="btn btn-info" id="myButton5" onclick="listTeachers()">
+    <span class="glyphicon glyphicon-apple"></span>List Teachers</button>
+<button class="btn btn-info" id="myButton6" onclick="listSections()">
+    <span class="glyphicon glyphicon-pencil"></span>List Sections</button>
+
+<br>
+<!--<div id="output"></div>-->
+<table id="output" class="table table-bordered"></table>
+
+<br>
+<br>
+<br>
+
+<select id="stdlist" button class="btn btn-default dropdown-toggle">
+</select>
+
+<select id="sctlist" button class="btn btn-default dropdown-toggle">
+</select>
+<br>
+<br>
+<div id="qwerty"></div>
+<button class="btn btn-danger" id="myButton7" onclick="addStudToSection()">
+    <span class="glyphicon glyphicon-plus"></span>Add Student to Section</button>
+<button class="btn btn-danger" id="myButton9" onclick="removeStudentFromSection()">
+    <span class="glyphicon glyphicon-trash"></span>Remove Student From Section</button>
+<button class="btn btn-default" id="myButton8" onclick="listStudentsInSection()">Display Students In Section</button>
+<button class="btn btn-default" id="myButton9" onclick="lookUpStudent()">Look up Student</button>
+
+
+<div id="test"></div>
+<div id="wrapper">
+    <table id="outputtwo" class="table table-striped"></table>
+</div>
+</body>
+</html>
